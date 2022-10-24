@@ -21,7 +21,7 @@ export class SideBarComponent implements OnInit {
       {
         name: 'Home',
         icon: 'uil uil-estate',
-        router: ['/', 'auth']
+        router: ['/', '/']
       },
       {
         name: 'Buscar',
@@ -31,8 +31,12 @@ export class SideBarComponent implements OnInit {
       {
         name: 'Tu biblioteca',
         icon: 'uil uil-chart',
+        router: ['/', 'tracks']
+      },
+      {
+        name: 'Canciones que te gustan',
+        icon: 'uil-heart-medical',
         router: ['/', 'favorites'],
-        query: { hola: 'mundo' }
       }
     ]
 
@@ -40,10 +44,6 @@ export class SideBarComponent implements OnInit {
       {
         name: 'Crear lista',
         icon: 'uil-plus-square'
-      },
-      {
-        name: 'Canciones que te gustan',
-        icon: 'uil-heart-medical'
       }
     ]
 
