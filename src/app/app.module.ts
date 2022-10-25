@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FavoritePageComponent } from './modules/favorites/pages/favorite-page/favorite-page.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [ //TODO: Declaraciones , componentes, directivas , pipes
@@ -14,7 +14,7 @@ import { FavoritePageComponent } from './modules/favorites/pages/favorite-page/f
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
