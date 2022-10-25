@@ -19,24 +19,17 @@ export class TracksPageComponent implements OnInit , OnDestroy {
   constructor(private TrackService: TrackService) { }
 
   ngOnInit(): void {
-    const observer1$  = this.TrackService.dataTracksTrending$
-    .subscribe(response =>{
-      this.tracksTrending  = response
+    this.TrackService.getAllTracks$()
+    .subscribe((response : TrackModel[]) => {
+      this.tracksTrending = response
+    })
+
+    this.TrackService.getAllRandom$()
+    .subscribe((response : TrackModel[]) => {
       this.tracksRandom = response
-     console.log('Canciones trending .... ' , response)
     })
-
-
-    const observer2$  = this.TrackService.dataTracksRadom$
-    .subscribe(response =>{
-      this.tracksRandom  = [...this.tracksRandom,...response]
-     console.log('Cancion random entrando, .... ' , response)
-    })
-
-    this.listObservers$ = [observer1$ , observer2$]
   }
 
   ngOnDestroy(): void {
-    this.listObservers$.forEach(u => u.unsubscribe())
   }
 }
