@@ -1,3 +1,5 @@
+LINK VIDEO: https://youtu.be/DR3Bh5KhRfg
+APP DESPLEGADA: https://spotify-cl-gt.herokuapp.com/
 # Spotify
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
